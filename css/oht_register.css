@@ -1,0 +1,40 @@
+#register_form{
+	text-align:center;
+}	
+
+#register_form div{
+	width:100%;
+}
+
+#register_form div p{
+	width:50%;
+	display:inline-block;
+	text-align:left;
+}
+
+#register_form div p input, #register_form div p select{
+	width:100%;
+}
+
+#oh_error{
+	background:#faa;
+}
+
+#oh_error div{
+	padding-top:15px;
+	font-weight:bold;
+}
+
+#register_form div p.inst{
+	width:100%;
+}
+
+.sms_notice{
+	color:#bbb;
+}
+
+#oht_sms_agree{
+	display:none;
+}
+
+

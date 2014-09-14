@@ -1,0 +1,158 @@
+#timesheet select, #timesheet p{
+	margin:10px 0px;
+}
+
+#timesheet input, #timesheet select{
+	width:100%;
+	float:right;
+}
+
+.update_class p{
+	margin:0px;
+	padding:2px;
+}
+
+.update_class p input{
+	width:100%;
+}
+
+.add_new_task input, .add_new_task select{
+	width:100%;
+}
+
+div.tasks{
+	width:100%;
+}
+
+div.task{
+	border-top:1px solid #000;
+	border-bottom:1px solid #000;
+}
+
+div.tasks div div{
+	display:inline-block;
+	width:27%;
+	border-right:1px solid #000;
+	padding:4px;
+	margin:4px 0px;
+}
+
+div.tasks div div.oht_delete_button{
+	border:none;
+}
+
+div.tasks div input, div.tasks div select{
+	width:100%;
+}
+
+.update_class, .all_tasks{
+	border:3px solid #f05023;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	margin-bottom:10px;
+	padding:10px;
+	margin-bottom:10px;
+}
+
+.tasks{
+	padding-bottom:5px;
+	border-bottom:2px solid #999;
+}
+
+.tasks div{
+	vertical-align:top;
+}
+
+.tasks div.oh_update_button button{
+	text-align:center;
+	margin:5px 0px;
+}
+
+.oht_task p:first-child{
+	width:65%;
+}
+
+
+.oht_task p{
+	width:35%;
+	display:inline-block;
+	margin:1px 0px;
+	padding:1px 0px;
+}
+
+.oht_class{
+	border:3px solid #f05023;
+	text-align:center;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	margin-bottom:10px;
+	padding:5px;
+}
+
+.oht_class p{
+	margin:5px 0px;
+	padding:0px;
+}
+
+#oht_class_list{
+	text-align:center;
+}
+
+#oht_new_class{
+	display:none;
+}
+
+#oht_class_add{
+	text-align:center;
+}
+
+.oht_class_form{
+	margin-top:10px;
+	display:none;
+}
+
+.oht_task div.oht_task_desc{
+	font-size:12px;
+	width:100%;
+	clear:both;
+}
+
+.oht_task div.oht_task_desc ul{
+	margin:0px;
+	padding:5px;
+}
+
+.oht_task div:first-child{
+	float:left;
+	position:relative;
+	width:50%;
+}
+
+.oht_task div{
+	float:right;
+	position:relative;
+	width:45%;
+}
+
+.oht_fact{
+	background:#ddd;
+	color:#000;
+	padding:10px;
+	margin:10px;
+}
+
+.oht_fact h2{
+	text-align:center;
+}
+
+p.oht_task_name{
+	font-weight:bold;
+	font-size:15px;
+}
+
+#oht_class_list button, #oht_class_add button, #oht_class_list input[type="submit"], .all_tasks input[type="submit"], #oht_back_button, .oht_delete_button button{
+	background:#321445;
+	color:#fff;
+}
