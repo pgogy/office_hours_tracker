@@ -308,7 +308,7 @@ class oht_Settings_timesheet_display{
 					<div>
 					<?PHP
 						$week_total += $task->hours;
-						echo $task->hours;					
+						echo substr($task->hours/60,0,1) . " hours " . ($task->hours%60) . " ";				
 					?> minutes </div>				
 					<div class="oht_delete_button">
 						<button onclick="javascript:oht_task_delete(<?PHP echo $task->id; ?>,<?PHP echo $_GET['class_id']; ?>,<?PHP echo $task->week; ?>)">Delete</button>
@@ -375,7 +375,7 @@ class oht_Settings_timesheet_display{
 				
 					if($time->time!=""){
 				
-						echo "<option value='" . addslashes($time->time) . "'>" . $time->time . " minutes</option>";
+						echo "<option value='" . addslashes($time->time) . "'>" . substr($time->time/60,0,1) . " hours " . ($time->time%60) . " minutes</option>";
 					
 					}
 					
@@ -396,7 +396,7 @@ class oht_Settings_timesheet_display{
 		
 			if($time->time!=""){
 		
-				echo "<option value='" . addslashes($time->time) . "'>" . $time->time . " minutes</option>";
+				echo "<option value='" . addslashes($time->time) . "'>" . substr($time->time/60,0,1) . " hours " . ($time->time%60) . " minutes</option>";
 			
 			}
 			
