@@ -153,6 +153,8 @@ class oht_Settings_config{
 		echo "<p><a href='" . admin_url("admin.php?page=oht_tasks_sheet") . "'><button>Add new task</button></a> - Use this page to add new tasks and manage new ones</p>";		
 		echo "<p><a href='" . site_url("?feed=oht_user_data") . "'><button>Download User Contact data</button></a></p>";
 		echo "<p><a href='" . site_url("?feed=oht_sms_data") . "'><button>Download Mobile SMS data</button></a></p>";
+		echo "<p><a href='" . site_url("?feed=oht_class_data") . "'><button>Download class data</button></a></p>";
+		echo "<p><a href='" . site_url("?feed=oht_tasks_data") . "'><button>Download task data</button></a></p>";
 		
 		$args = array(
 				'role'         => 'timesheet'
