@@ -35,7 +35,7 @@ class oht_download{
 
 			$users = get_users($args);
 
-			$csv = "";
+			$csv = "user login, display name, class id, task, hours, comments, week\n";
 
 			foreach($users as $user){
 
@@ -66,12 +66,11 @@ class oht_download{
 
 						foreach($tasks as $task){
 							$class_csv = "";
-							$class_csv .= "class_id_" . $this->maybeEncodeCSVField($task->class_id) . ",";
+							$class_csv .= $this->maybeEncodeCSVField($task->class_id) . ",";
 							$class_csv .= $this->maybeEncodeCSVField(trim($task->task)) . ",";
 							$class_csv .= $this->maybeEncodeCSVField($task->hours) . ",";
 							$class_csv .= $this->maybeEncodeCSVField($task->comments) . ",";
-							$class_csv .= $this->maybeEncodeCSVField($task->week) . ",";
-							$class_csv .= $this->maybeEncodeCSVField($class->credits);
+							$class_csv .= $this->maybeEncodeCSVField($task->week);
 							$csv .= $pre_classes . $class_csv . "\n";
 						}
 
@@ -115,7 +114,7 @@ class oht_download{
 
 			$users = get_users($args);
 
-			$csv = "";
+			$csv = "login,name,display name,class id,employer,department,class name,delivery,length,compensation,credits\n";
 
 			foreach($users as $user){
 
@@ -136,7 +135,7 @@ class oht_download{
 
 					foreach($classes as $class){
 						$class_csv = "";
-						$class_csv .= "class_id_" . $this->maybeEncodeCSVField($class->id) . ",";
+						$class_csv .= $this->maybeEncodeCSVField($class->id) . ",";
 						$class_csv .= $this->maybeEncodeCSVField($class->employer) . ",";
 						$class_csv .= $this->maybeEncodeCSVField($class->department) . ",";
 						$class_csv .= $this->maybeEncodeCSVField($class->class_name) . ",";
@@ -187,7 +186,7 @@ class oht_download{
 
 			$users = get_users($args);
 
-			$csv = "";
+			$csv = "login,name,display name,email,phone number, update preference, address 1, address 2, city, state, zipcode, update permission\n";
 
 			foreach($users as $user){
 
@@ -250,7 +249,7 @@ class oht_download{
 
 			$users = get_users($args);
 
-			$csv = "";
+			$csv = "display name, phone number\n";
 
 			foreach($users as $user){
 

@@ -3,7 +3,7 @@
 /*
 	Plugin Name: Office Hours Tracker
 	Description: Allows the site to present an Office Hours time tracker
-	Version: 0.01
+	Version: 0.2
 	Author: pgogy
 	Author URI: http://www.pgogywebstuff.com
 */
@@ -21,7 +21,7 @@ require_once('code/user/class-oht_Register_user.php');
 require_once('code/user/class-oht_Redirect_user.php');
 require_once('code/user/class-oht_User_profile.php');
 require_once('code/scheduled_tasks/class-oht_schedule_emails.php');
-require_once('code/download/class-oht_Download.php');
+require_once('code/download/class-oht_download.php');
 
 class OHT{
 

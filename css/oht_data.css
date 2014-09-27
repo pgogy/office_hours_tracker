@@ -1,5 +1,6 @@
 #timesheet select, #timesheet p{
 	margin:10px 0px;
+	padding: 0px;
 }
 
 #timesheet input, #timesheet select{
@@ -153,6 +154,7 @@ p.oht_task_name{
 }
 
 #oht_class_list button, #oht_class_add button, #oht_class_list input[type="submit"], .all_tasks input[type="submit"], #oht_back_button, .oht_delete_button button{
-	background:#321445;
+	background:#24890d;
 	color:#fff;
+	padding:20px;
 }
