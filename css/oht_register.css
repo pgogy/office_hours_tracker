@@ -13,7 +13,18 @@
 }
 
 #register_form div p input, #register_form div p select{
-	width:100%;
+	width: 100%;
+	padding: 0px;
+	border: 1px solid #cfcfcf;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	height: 20px;
+}
+
+#register_form div p input[submit]{
+	border:none;
+	background:#069400
 }
 
 #oh_error{
