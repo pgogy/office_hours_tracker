@@ -62,14 +62,20 @@ class oht_Settings_config{
 	}
 	
 	public function get_pages(){
-		$args = array(
+
+		/*$args = array(
 			'orderby'          => 'post_date',
 			'order'            => 'DESC',
 			'post_type'        => 'page',
 			'post_status'      => 'publish',
 			'suppress_filters' => true ); 
 	
-		return get_posts($args);
+		return get_posts($args);*/
+
+		global $wpdb;
+		$posts = $wpdb->get_results( "SELECT * FROM " . $wpdb->prefix . "posts where post_type='page' and post_status='publish'" );
+		return $posts;
+
 	}
 	
 	public function setting_register_page(){		
