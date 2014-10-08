@@ -114,7 +114,7 @@ class oht_download{
 
 			$users = get_users($args);
 
-			$csv = "login,name,display name,class id,employer,department,class name,delivery,length,compensation,credits\n";
+			$csv = "login,name,class id,employer,department,class name,delivery,length,compensation,credits\n";
 
 			foreach($users as $user){
 

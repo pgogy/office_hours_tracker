@@ -20,7 +20,7 @@
 }
 
 .add_new_task input, .add_new_task select{
-	width:100%;
+	width:98%;
 }
 
 div.tasks{
@@ -97,6 +97,7 @@ div.tasks div input, div.tasks div select{
 .oht_class p{
 	margin:5px 0px;
 	padding:0px;
+	width: 98%;
 }
 
 #oht_class_list{
@@ -159,4 +160,5 @@ p.oht_task_name{
 	background:#24890d;
 	color:#fff;
 	padding:20px;
+	height:70px;
 }
