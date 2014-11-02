@@ -22,6 +22,7 @@ class oht_Settings_register_display{
 	public function show_form(){
 	
 		?><form id="register_form" method="POST" action="" onsubmit="return oht_register_user();">
+		        <?php wp_nonce_field('office_hours_tracker_nonce','office_hours_tracker_register_nonce'); ?>
 			 	<div><p class='inst'>Please enter your details below. Fields marked * are required</p></div>
 				<div><p>User name *</p><p><input type="text" name="user_name" id="user_name" /></p></div>
 				<div><p>First name *</p><p><input type="text" name="first_name" id="first_name" /></p></div>
@@ -62,9 +63,35 @@ class oht_Settings_register_display{
 			echo $content;
 		
 			if(isset($_POST['first_name'])){
+			
+				if(wp_verify_nonce($_POST['office_hours_tracker_register_nonce'], 'office_hours_tracker_nonce' )){ 
 				
-				if(!$oht_Register_user->register_user()){
-					$this->show_form();
+				    if( isset($_POST['user_name']) &&
+						isset($_POST['first_name']) && 
+						isset($_POST['family_name']) &&
+						isset($_POST['address']) &&
+						isset($_POST['city']) &&
+						isset($_POST['state']) && 
+						isset($_POST['zipcode']) && 
+						isset($_POST['email']) && 
+						isset($_POST['number']) && 
+						isset($_POST['update']) && 
+						isset($_POST['password']) ){
+				
+						if(!$oht_Register_user->register_user()){
+							$this->show_form();
+						}
+					
+					}else{
+					
+						wp_die("Apologies but the data wasn't sufficient");
+					
+					}
+				
+				}else{
+				
+					wp_die("Apologies but the security settings did not verify");
+				
 				}
 			
 			}else{
